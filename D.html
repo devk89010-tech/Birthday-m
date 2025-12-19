@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday Dev</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            animation: pop 1.2s ease;
+        }
+
+        h1 {
+            color: #ff0066;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        /* Card animation */
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Text glow animation */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #ff0066;
+            }
+            to {
+                text-shadow: 0 0 20px #ff66a3;
+            }
+        }
+
+        /* Floating balloons */
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            width: 40px;
+            height: 55px;
+            border-radius: 50%;
+            animation: float 6s infinite ease-in;
+        }
+
+        .balloon::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 40px;
+            background: #555;
+            top: 55px;
+            left: 50%;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Balloons -->
+    <div class="balloon" style="left:10%; background:red;"></div>
+    <div class="balloon" style="left:30%; background:blue; animation-delay:1s;"></div>
+    <div class="balloon" style="left:50%; background:green; animation-delay:2s;"></div>
+    <div class="balloon" style="left:70%; background:orange; animation-delay:3s;"></div>
+    <div class="balloon" style="left:90%; background:purple; animation-delay:4s;"></div>
+
+    <!-- Birthday Card -->
+    <div class="card">
+        <h1>🎉 Happy Birthday 🎉</h1>
+        <h2>Dev 🎂</h2>
+        <p>Wishing you joy, success,</p>
+        <p>and a year full of happiness! 🎁🎈</p>
+    </div>
+
+</body>
+</html>
